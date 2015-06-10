@@ -10,7 +10,7 @@
 
 @interface ViewController : UIViewController
 
-@property (strong, nonatomic) IBAction UILabel *display;
+@property (strong, nonatomic) IBOutlet UILabel *display;
 
 -(void) processDigit: (int) digit;
 -(void) processOp: (char) theOp;
@@ -31,7 +31,7 @@
 
 -(IBAction) clickOver;
 -(IBAction) clickEquals;
--(IBAction) clickClear;
+-(IBAction) clickClear;
 
 @end
 

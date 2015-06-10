@@ -36,7 +36,7 @@
         }else{
             return @"1";
         }
-    }else if(description == 1){
+    }else if(denominator == 1){
         return [NSString stringWithFormat: @"%i", numerator];
     }else {
         return [NSString stringWithFormat: @"%i/%i", numerator, denominator];
@@ -90,12 +90,6 @@
     int v = denominator;
     int temp;
     
-    if(u == 0){
-        return;
-    }else{
-        u = -u;
-    }
-    
     while (v != 0) {
         temp = u % v;
         u = v;
@@ -103,6 +97,6 @@
     }
     
     numerator /= u;
-    denominator /= v;
+    denominator /= u;
 }
 @end
